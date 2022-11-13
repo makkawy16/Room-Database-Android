@@ -13,10 +13,32 @@ public class Contact {
     @ColumnInfo
     String name;
     String phone;
+    String test;
+    Department department;
 
-    public Contact(String name, String phone) {
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public Contact(String name, String phone, Department department) {
         this.name = name;
         this.phone = phone;
+
+        this.department = department;
+
+    }
+
+    public String getTest() {
+        return test;
+    }
+
+    public void setTest(String test) {
+        this.test = test;
     }
 
     public int getId() {

@@ -9,13 +9,13 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.roomdatabase.data.model.Contact;
+import com.example.roomdatabase.data.model.Department;
 import com.example.roomdatabase.data.source.local.ContactDatabase;
 import com.example.roomdatabase.databinding.ActivityAddContactBinding;
 
 
 public class AddContact extends AppCompatActivity {
     ActivityAddContactBinding binding;
-    private String name , phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class AddContact extends AppCompatActivity {
     private void addContact(String name , String phone){
         if(!name.isEmpty() && !phone.isEmpty()){
             long num = ContactDatabase.getContactDatabase(this)
-                    .getContactDao().addContact(new Contact(name, phone));
+                    .getContactDao().addContact(new Contact(name, phone, new Department(5,"IS")));
 
             if(num != -1 )
                 startActivity(new Intent(this,MainActivity.class)); // dh msh sah al mafrod astkhkdm live data w akhleh y3rdha
