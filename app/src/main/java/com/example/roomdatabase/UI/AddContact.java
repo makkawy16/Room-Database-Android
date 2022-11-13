@@ -16,6 +16,10 @@ import com.example.roomdatabase.databinding.ActivityAddContactBinding;
 
 public class AddContact extends AppCompatActivity {
     ActivityAddContactBinding binding;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 74c6257a7f35fd9024075109bea3288ada56c4b6
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
